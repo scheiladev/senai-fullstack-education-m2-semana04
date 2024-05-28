@@ -7,3 +7,15 @@ let soma = numeros.reduce((total, atual) => {
 }, 0);
 
 console.log(soma);
+
+// Exercício 02
+
+let pares = numeros.filter((valor) => {
+  if (valor % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+console.log(pares);
