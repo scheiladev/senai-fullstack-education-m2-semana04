@@ -44,9 +44,19 @@ class Produto {
       console.log("Estoque insuficiente");
     }
   }
+
+  // Exercício 06
+  repor(quantidadeReposta) {
+    this.quantidade += quantidadeReposta;
+    console.log(
+      `${quantidadeReposta} unidades de ${this.nome} repostas. Quantidade atual: ${this.quantidade}`
+    );
+  }
 }
 
 const produtoNovo = new Produto("Caneta Bic Azul", 1.5, 5);
 
 produtoNovo.vender(2);
 produtoNovo.vender(20);
+produtoNovo.repor(10);
+produtoNovo.vender(10);
