@@ -57,6 +57,16 @@ class Produto {
       } unidades disponíveis`
     );
   }
+
+  // Exercício 08
+  atualizarPreco(novoPreco) {
+    this.preco = novoPreco;
+    console.log(
+      `O preço do produto ${this.nome.toUpperCase()} foi atualizado para R$ ${this.preco.toFixed(
+        2
+      )}`
+    );
+  }
 }
 
 const produtoNovo = new Produto("Caneta Bic Azul", 1.5, 5);
@@ -72,3 +82,5 @@ produtoNovo.mostrarEstoque();
 
 produtoNovo.vender(10);
 produtoNovo.mostrarEstoque();
+
+produtoNovo.atualizarPreco(2.0);
