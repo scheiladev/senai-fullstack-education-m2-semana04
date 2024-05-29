@@ -37,9 +37,7 @@ class Produto {
   vender(quantidadeVendida) {
     if (quantidadeVendida <= this.quantidade) {
       this.quantidade -= quantidadeVendida;
-      console.log(
-        `${quantidadeVendida} unidades de ${this.nome} vendidas. Quantidade restante: ${this.quantidade}`
-      );
+      console.log(`${quantidadeVendida} unidades de ${this.nome} vendidas.`);
     } else {
       console.log("Estoque insuficiente");
     }
@@ -48,15 +46,29 @@ class Produto {
   // Exercício 06
   repor(quantidadeReposta) {
     this.quantidade += quantidadeReposta;
+    console.log(`${quantidadeReposta} unidades de ${this.nome} repostas.`);
+  }
+
+  // Exercício 07
+  mostrarEstoque() {
     console.log(
-      `${quantidadeReposta} unidades de ${this.nome} repostas. Quantidade atual: ${this.quantidade}`
+      `O produto ${this.nome.toUpperCase()} possui ${
+        this.quantidade
+      } unidades disponíveis`
     );
   }
 }
 
 const produtoNovo = new Produto("Caneta Bic Azul", 1.5, 5);
 
+produtoNovo.mostrarEstoque();
 produtoNovo.vender(2);
+
+produtoNovo.mostrarEstoque();
 produtoNovo.vender(20);
+
 produtoNovo.repor(10);
+produtoNovo.mostrarEstoque();
+
 produtoNovo.vender(10);
+produtoNovo.mostrarEstoque();
