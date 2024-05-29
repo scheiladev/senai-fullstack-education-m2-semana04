@@ -19,3 +19,11 @@ let pares = numeros.filter((valor) => {
 });
 
 console.log(pares);
+
+// Exercício 03
+
+let quadrados = numeros.map((valor) => {
+  return valor * 2;
+});
+
+console.log(quadrados);
