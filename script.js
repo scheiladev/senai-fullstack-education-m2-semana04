@@ -27,6 +27,10 @@ console.log(quadrados);
 
 // Exercício 04
 class Produto {
+  nome;
+  preco;
+  quantidade;
+
   constructor(nome, preco, quantidade) {
     this.nome = nome;
     this.preco = preco;
